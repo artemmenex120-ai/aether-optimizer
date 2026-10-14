@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "aether_optimizer",
+  "version": "${version}",
+  "name": "Aether Optimizer",
+  "description": "Experimental configurable server-side AI workload reduction for selected distant mobs.",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.aether.optimizer.AetherOptimizer"]
+  },
+  "mixins": ["aether_optimizer.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.2",
+    "java": ">=25"
+  }
+}
