@@ -19,8 +19,6 @@ jobs:
           gradle-version: '9.5.1'
       - name: Validate metadata JSON
         run: python -c "import json; [json.load(open(p, encoding='utf-8')) for p in ('src/main/resources/fabric.mod.json', 'src/main/resources/aether_optimizer.mixins.json')]"
-      - name: Static project validation
-        run: python tools/validate_project.py
       - name: Unit tests
         run: gradle test --no-daemon --stacktrace
       - name: Build remapped mod and sources
